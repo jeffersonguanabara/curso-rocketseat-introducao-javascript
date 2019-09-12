@@ -9,16 +9,16 @@
     <body>
         
         <script>
-            // estrutura de repeticoes
-            // for
-            for (var i = 0; i <= 100; i++) {console.log(i);}
-                
-            // while
-            var j = 100000;
-            while (j > 50) {
-                console.log(j);
-                j /= 5;
+            // intervalo e timeout
+            function verAlgo() {
+                console.log("Hello World");
             }
+
+            // o setInterval executa a funcao passada por parametro a cada milissegundos
+            // setInterval(verAlgo, 1000);
+            // o setTimeout executa a funcao passada por parametro com a espera em milissegundos
+            setTimeout(verAlgo, 5000);
+            
         </script>    
     
     </body>
