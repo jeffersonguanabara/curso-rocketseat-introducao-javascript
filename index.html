@@ -6,23 +6,27 @@
     </head>
 
     <body>
+        <!-- Observação: 
+                Falando-se em operações matemáticas no javaScript:
+                    + em operações entre uma string e um inteiro ou float, para a 
+                        soma, ocorre a conversão do valor do tipo 'inteiro ou float' 
+                        para string e as duas strings são concatenadas; mas para as
+                        demais operações (subtração, multiplicação, divisão, resto de uma divisão)
+                        a string é convertida para 'inteiro ou float e a operação matemática e 
+                        efetuada.
+        -->
         <script>
-            var nome = "Jefferson";
-            var idade = 31;
-            var peso = 76.3;
-            var humano = true;
-
-            var alunos = ['Diego', 'Gabriel', 'Jorge'];
-
-            var aluno = {
-                nome : "Jefferson",
-                idade : 31,
-                peso : 76.3,
-                humano : true 
-            };
-
-            console.log(aluno);
-            console.log(alunos);
+            var x = 10, y = 5;
+            // operacoes matematicas
+            console.log(x + y);
+            console.log(x - y);
+            console.log(x * x);
+            console.log(x / y);
+            console.log(x % y);
+            // incremento
+            x = x + 3;
+            x += 3;
+            console.log(x);
         </script>    
     </body>
 </html>
