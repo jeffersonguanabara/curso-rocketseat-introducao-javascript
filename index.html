@@ -9,35 +9,12 @@
     <body>
         
         <script>
-            // Operadores lógicos
-            // AND
-            function maiorDeIdade(sexo, idade) {
-                // M para masculino            
-                if(sexo === 'M' && idade >= 18)
-                    return true;
-                // F para feminino    
-                else if (sexo === 'F' && idade >= 21)
-                    return true;
-                else
-                    return false;
+            // condicao ternaria
+            function sexo(sexo) {
+                return (sexo === 'M') ? 'Masculino' : 'Feminino';
             }
-            console.log(maiorDeIdade('M', 15));
-            console.log(maiorDeIdade('F', 30));
-            console.log(maiorDeIdade('F', 13));
-
-            // OR
-            function maiorDeIdade2(sexo, idade, amigoDono) {
-                if((sexo === "M" && idade >= 18) || amigoDono)
-                    return true;
-                else if ((sexo === "F" && idade >= 21) || amigoDono)
-                    return true;
-                else
-                    return false;
-            }
-            console.log(maiorDeIdade2('M', 15, true));
-            console.log(maiorDeIdade2('F', 30, true));
-            console.log(maiorDeIdade2('M', 15, false));
-        
+            console.log(sexo('M'));
+            console.log(sexo('F'));
         </script>    
     
     </body>
