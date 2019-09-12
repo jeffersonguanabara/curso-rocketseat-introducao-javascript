@@ -1,47 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 
     <head>
+        <meta charset="UTF-8">
         <title>Curso JavaScript</title>
     </head>
 
     <body>
-        <!--
-            Observação:
-                + uso do '==' em condicionais, verifica se o conteúdo comparado é igual;
-                    ? para esse tipo de comparação devemos ter bastante cuidade em relação a comparações
-                    entre tipos diferentes, mas com conteúdo iguais ?
-                + uso do '===' em condicionais, resolve o problema do '==', verificando não apenas o
-                    conteúdo, mas, também se os tipos dos elementos comparados são iguais.
-        -->
         
         <script>
-            // funcao usando o condicional if/else
-            function retornaSexo(sexo) {
-                // M para masculino
-                // F para feminino
-                if(sexo === 'M')
-                    return 'Masculino';
-                else if (sexo === 'F')
-                    return 'Feminino';
+            // Operadores lógicos
+            // AND
+            function maiorDeIdade(sexo, idade) {
+                // M para masculino            
+                if(sexo === 'M' && idade >= 18)
+                    return true;
+                // F para feminino    
+                else if (sexo === 'F' && idade >= 21)
+                    return true;
                 else
-                    return 'Outro';
+                    return false;
             }
-            console.log(retornaSexo('M'));
-            console.log(retornaSexo('F'));
-            console.log(retornaSexo('S'));
+            console.log(maiorDeIdade('M', 15));
+            console.log(maiorDeIdade('F', 30));
+            console.log(maiorDeIdade('F', 13));
 
-            // funcao usando o condicional switch/case
-            function retornaSexo2(sexo) {
-                switch(sexo) {
-                    case 'M': return 'Masculino';
-                    case 'F': return 'Feminino';
-                    default: return 'Outro';
-                }
+            // OR
+            function maiorDeIdade2(sexo, idade, amigoDono) {
+                if((sexo === "M" && idade >= 18) || amigoDono)
+                    return true;
+                else if ((sexo === "F" && idade >= 21) || amigoDono)
+                    return true;
+                else
+                    return false;
             }
-            console.log(retornaSexo2('M'));
-            console.log(retornaSexo2('F'));
-            console.log(retornaSexo2('teste'));
+            console.log(maiorDeIdade2('M', 15, true));
+            console.log(maiorDeIdade2('F', 30, true));
+            console.log(maiorDeIdade2('M', 15, false));
+        
         </script>    
+    
     </body>
 </html>
