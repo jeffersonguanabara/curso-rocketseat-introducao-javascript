@@ -7,17 +7,16 @@
     </head>
 
     <body>
+
+        <div id="app">
+            <button onclick="mostraAlerta()">Me pressione</button>
+        </div>
         
         <script>
-            // intervalo e timeout
-            function verAlgo() {
-                console.log("Hello World");
+            
+            function mostraAlerta() {
+                alert('O botão foi clicado!');
             }
-
-            // o setInterval executa a funcao passada por parametro a cada milissegundos
-            // setInterval(verAlgo, 1000);
-            // o setTimeout executa a funcao passada por parametro com a espera em milissegundos
-            setTimeout(verAlgo, 5000);
             
         </script>    
     
