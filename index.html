@@ -9,13 +9,18 @@
     <body>
 
         <div id="app">
-            <button onclick="mostraAlerta()">Me pressione</button>
+            <input type="text" name="nome" />
+            <button class="botao">Adicionar</button>
         </div>
         
         <script>
             
-            function mostraAlerta() {
-                alert('O botão foi clicado!');
+            var inputElement = document.querySelector("input[name=nome]");
+            var btn = document.querySelector("button.botao");
+
+            btn.onclick = function() {
+                var text = inputElement.value;
+                alert(text);
             }
             
         </script>    
