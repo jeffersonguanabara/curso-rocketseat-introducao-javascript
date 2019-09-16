@@ -9,19 +9,19 @@
     <body>
 
         <div id="app">
-            <input type="text" name="nome" />
-            <button class="botao">Adicionar</button>
+            
         </div>
         
         <script>
             
-            var inputElement = document.querySelector("input[name=nome]");
-            var btn = document.querySelector("button.botao");
+            var linkElement = document.createElement('a');
+            linkElement.setAttribute('href', 'http://rocketseat.com.br');
 
-            btn.onclick = function() {
-                var text = inputElement.value;
-                alert(text);
-            }
+            var textElement = document.createTextNode('Acessar site da Rocketseat');
+            linkElement.appendChild(textElement);
+
+            var containerElement = document.querySelector('#app');
+            containerElement.appendChild(linkElement);
             
         </script>    
     
