@@ -9,17 +9,22 @@
     <body>
 
         <div id="app">
-            <div class="box"></div>
+            <button id='criarQuadrado'>Criar quadrado</button>
         </div>
         
         <script>
-            
-            var boxElement = document.querySelector('.box');
+            var botao = document.querySelector('#criarQuadrado');
+            botao.onclick = function() {
 
-            boxElement.style.width = '100px';
-            boxElement.style.height = '100px';
-            boxElement.style.backgroundColor = '#f00';
-            
+                var boxElement = document.createElement('div');
+                boxElement.setAttribute('className', 'box');
+                boxElement.style.width = '100px';
+                boxElement.style.height = '100px';
+                boxElement.style.backgroundColor = '#f00';
+
+                var divApp = document.querySelector('#app');
+                divApp.appendChild(boxElement);
+            }    
         </script>    
     
     </body>
