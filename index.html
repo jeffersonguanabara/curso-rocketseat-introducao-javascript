@@ -9,20 +9,22 @@
     <body>
 
         <div id="app">
-            
+            <button id='criarQuadrado'>Criar quadrado</button>
         </div>
         
         <script>
-            
-            var linkElement = document.createElement('a');
-            linkElement.setAttribute('href', 'http://rocketseat.com.br');
+            var botao = document.querySelector('#criarQuadrado');
+            botao.onclick = function() {
 
-            var textElement = document.createTextNode('Acessar site da Rocketseat');
-            linkElement.appendChild(textElement);
+                var boxElement = document.createElement('div');
+                boxElement.setAttribute('className', 'box');
+                boxElement.style.width = '100px';
+                boxElement.style.height = '100px';
+                boxElement.style.backgroundColor = '#f00';
 
-            var containerElement = document.querySelector('#app');
-            containerElement.appendChild(linkElement);
-            
+                var divApp = document.querySelector('#app');
+                divApp.appendChild(boxElement);
+            }    
         </script>    
     
     </body>
