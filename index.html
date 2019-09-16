@@ -7,17 +7,21 @@
     </head>
 
     <body>
+
+        <div id="app">
+            
+        </div>
         
         <script>
-            // intervalo e timeout
-            function verAlgo() {
-                console.log("Hello World");
-            }
+            
+            var linkElement = document.createElement('a');
+            linkElement.setAttribute('href', 'http://rocketseat.com.br');
 
-            // o setInterval executa a funcao passada por parametro a cada milissegundos
-            // setInterval(verAlgo, 1000);
-            // o setTimeout executa a funcao passada por parametro com a espera em milissegundos
-            setTimeout(verAlgo, 5000);
+            var textElement = document.createTextNode('Acessar site da Rocketseat');
+            linkElement.appendChild(textElement);
+
+            var containerElement = document.querySelector('#app');
+            containerElement.appendChild(linkElement);
             
         </script>    
     
