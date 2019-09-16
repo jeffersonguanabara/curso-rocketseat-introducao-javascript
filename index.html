@@ -13,18 +13,46 @@
         </div>
         
         <script>
-            var botao = document.querySelector('#criarQuadrado');
-            botao.onclick = function() {
+            
+            function getRandomColor() {
+                var letters = "0123456789ABCDEF";
+                var color = "#";
+                for (var i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+            }
 
+            function mudaCor(id) {
+                var teste = document.getElementById(id);
+                var cor = getRandomColor();
+                teste.style.backgroundColor = cor;
+            }
+
+            function getRandomNumber() {
+                var numbers = "0123456789";
+                var number = "0";
+                for (var i = 0; i < 6; i++) {
+                    number += numbers[Math.floor(Math.random() * 10)];
+                }
+                return number;
+            }
+            
+            var botao = document.querySelector('#criarQuadrado');
+            
+            botao.onclick = function() {
+                var number = 'div'+getRandomNumber();
                 var boxElement = document.createElement('div');
-                boxElement.setAttribute('className', 'box');
+                boxElement.setAttribute('id', number);
+                boxElement.setAttribute('class', 'box');
                 boxElement.style.width = '100px';
                 boxElement.style.height = '100px';
                 boxElement.style.backgroundColor = '#f00';
-
+                boxElement.addEventListener('mouseover', function(){mudaCor(number)});
                 var divApp = document.querySelector('#app');
                 divApp.appendChild(boxElement);
-            }    
+                console.log('criou a div');
+            }
         </script>    
     
     </body>
