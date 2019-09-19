@@ -4,6 +4,11 @@
     <head>
         <meta charset="UTF-8">
         <title>Curso JavaScript</title>
+        <style>
+            div {
+                padding: 2em;
+            }
+        </style>
     </head>
 
     <body>
@@ -13,7 +18,8 @@
         </div>
 
         <div id="lista">
-            
+            <input type="text" name="nome">
+            <button onclick="adicionar()">Adicionar</button> 
         </div>
         
         <script>
@@ -71,6 +77,19 @@
             });
 
             escopo.appendChild(lista);
+
+            function adicionar() {
+                var nome = document.querySelector("input").value;
+                
+                var lista = document.querySelector("ul");
+                var item = document.createElement("li");
+                item.innerText = nome;
+                lista.appendChild(item);
+
+                var input = document.querySelector("input");
+                input.value = "";
+                
+            }
         </script>
     
     </body>
