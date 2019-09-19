@@ -80,11 +80,18 @@
 
             function adicionar() {
                 var nome = document.querySelector("input").value;
-                console.log(nome);
+                
                 var lista = document.querySelector("ul");
                 var item = document.createElement("li");
                 item.innerText = nome;
                 lista.appendChild(item);
+
+                var div = document.querySelector("#lista");
+                var input = document.querySelector("input");
+                var btn = document.querySelector("#lista button");
+                div.removeChild(input);
+                div.removeChild(btn);
+                
             }
         </script>
     
