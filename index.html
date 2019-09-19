@@ -14,83 +14,10 @@
     <body>
 
         <div id="app">
-            <button id='criarQuadrado'>Criar quadrado</button>
+            <ul></ul>
+            <input type="text" placeholder="Digite um todo">
+            <button>Adicionar</button> 
         </div>
-
-        <div id="lista">
-            <input type="text" name="nome">
-            <button onclick="adicionar()">Adicionar</button> 
-        </div>
-        
-        <script>
-            
-            function getRandomColor() {
-                var letters = "0123456789ABCDEF";
-                var color = "#";
-                for (var i = 0; i < 6; i++) {
-                    color += letters[Math.floor(Math.random() * 16)];
-                }
-                return color;
-            }
-
-            function mudaCor(id) {
-                var teste = document.getElementById(id);
-                var cor = getRandomColor();
-                teste.style.backgroundColor = cor;
-            }
-
-            function getRandomNumber() {
-                var numbers = "0123456789";
-                var number = "0";
-                for (var i = 0; i < 6; i++) {
-                    number += numbers[Math.floor(Math.random() * 10)];
-                }
-                return number;
-            }
-            
-            var botao = document.querySelector('#criarQuadrado');
-            
-            botao.onclick = function() {
-                var number = 'div'+getRandomNumber();
-                var boxElement = document.createElement('div');
-                boxElement.setAttribute('id', number);
-                boxElement.setAttribute('class', 'box');
-                boxElement.style.width = '100px';
-                boxElement.style.height = '100px';
-                boxElement.style.backgroundColor = '#f00';
-                boxElement.addEventListener('mouseover', function(){mudaCor(number)});
-                var divApp = document.querySelector('#app');
-                divApp.appendChild(boxElement);
-                console.log('criou a div');
-            }
-        </script>
-        <!-- script para as questões 3 e 4 do desafio -->
-        <script>
-            var nomes = ["Diego", "Gabriel", "Lucas"];
-            var escopo = document.querySelector('#lista');
-            var lista = document.createElement('ul');
-            
-            nomes.forEach(function(item) {
-                var nome = document.createElement('li')
-                nome.innerText = item
-                lista.appendChild(nome)
-            });
-
-            escopo.appendChild(lista);
-
-            function adicionar() {
-                var nome = document.querySelector("input").value;
-                
-                var lista = document.querySelector("ul");
-                var item = document.createElement("li");
-                item.innerText = nome;
-                lista.appendChild(item);
-
-                var input = document.querySelector("input");
-                input.value = "";
-                
-            }
-        </script>
-    
+        <script src="todos.js"></script>  
     </body>
 </html>
