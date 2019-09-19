@@ -11,6 +11,10 @@
         <div id="app">
             <button id='criarQuadrado'>Criar quadrado</button>
         </div>
+
+        <div id="lista">
+            
+        </div>
         
         <script>
             
@@ -53,7 +57,21 @@
                 divApp.appendChild(boxElement);
                 console.log('criou a div');
             }
-        </script>    
+        </script>
+        <!-- script para as questões 3 e 4 do desafio -->
+        <script>
+            var nomes = ["Diego", "Gabriel", "Lucas"];
+            var escopo = document.querySelector('#lista');
+            var lista = document.createElement('ul');
+            
+            nomes.forEach(function(item) {
+                var nome = document.createElement('li')
+                nome.innerText = item
+                lista.appendChild(nome)
+            });
+
+            escopo.appendChild(lista);
+        </script>
     
     </body>
 </html>
