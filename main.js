@@ -1,7 +1,17 @@
-axios.get("http://api.github.com/users/jeffersonguanabara")
-    .then(function(response) {
-        console.log(response);
+function checaIdade(idade) {
+    return new Promise(function(resolve, reject) {
+        if (idade >= 18) {
+            resolve();
+        } else {
+            reject();
+        }
+    });
+}
+
+checaIdade(20)
+    .then(function() {
+        console.log("Maior que 18");
     })
-    .catch(function(error) {
-        console.warn(error);
+    .catch(function() {
+        console.log("Menor que 18");
     });
